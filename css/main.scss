@@ -23,7 +23,7 @@ body{
     margin: 0;
     width: 100%;
     overflow-x: hidden;
-    overflow-y: scroll;
+    
     //scroll-behavior: smooth;
     
     //scroll-snap-type: y mandatory;
@@ -390,10 +390,10 @@ nav {
     
   }
 #sakums {
-    scroll-snap-align: end;
+
 }
 #ez-visi{
-    scroll-snap-align: start ;
+
 }
 
   .ez-next{
@@ -495,7 +495,7 @@ nav {
   text-align: center;
   background-color: #2c2c2c;
   overflow: hidden;
-  scroll-snap-align: start;
+  
   
 }
 
@@ -1033,7 +1033,7 @@ text-align: left;
     height: 100vh;
     overflow: hidden;
     background-color: #2c2c2c;
-    scroll-snap-align: start;
+    
 }
 .grid-edieni{
     position: absolute;
@@ -1155,7 +1155,7 @@ text-align: left;
     height: 100vh;
     overflow: hidden;
     background-color: #a7a7a7;
-    scroll-snap-align: start;
+    
 }
 .grid-izbrauk{
     position: absolute;
@@ -1291,7 +1291,7 @@ text-align: left;
     height: 100vh;
     overflow: hidden;
     background-color: #2c2c2c;
-    scroll-snap-align: start;
+    
 }
 .grid-kontakt{
     position: absolute;
