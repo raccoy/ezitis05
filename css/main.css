@@ -1735,4 +1735,64 @@ nav ul li {
   font-family: 'reg-text-b';
   margin: 5px;
 }
+
+.svgblock {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  -webkit-transition: background-color 2s ease;
+  transition: background-color 2s ease;
+  -webkit-transition: 2s;
+  transition: 2s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+  z-index: 9999;
+}
+
+#progress {
+  height: 1px;
+  background: #7e7e7e;
+  position: absolute;
+  top: 45%;
+  opacity: 1;
+  z-index: 2;
+  -webkit-transition: width .5s;
+  transition: width .5s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+}
+
+.fadeOut {
+  opacity: 0 !important;
+  -webkit-transition: opacity 2s !important;
+  transition: opacity 2s !important;
+}
+
+.goup {
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-transform: translate(0, -150vh);
+          transform: translate(0, -150vh);
+}
+
+svg {
+  position: absolute;
+  width: 40vw;
+  display: block;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-25%, -25%);
+          transform: translate(-25%, -25%);
+}
+
+.path {
+  width: 300px;
+  stroke-dasharray: 6500;
+  stroke-dashoffset: 6500;
+  -webkit-transition: 1s !important;
+  transition: 1s !important;
+  -webkit-transition-timing-function: ease !important;
+          transition-timing-function: ease !important;
+  stroke-width: 2;
+}
 /*# sourceMappingURL=main.css.map */
