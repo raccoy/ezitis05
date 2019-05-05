@@ -77,13 +77,21 @@ header .logo {
 }*/
 /*logo*/
 .holder {
-  position: fixed;
-  width: 15em;
-  height: 15em;
-  top: -7vh;
-  left: -4vw;
+  position: absolute;
+  overflow: hidden;
+  width: 15vh;
+  height: 15vh;
+  top: 0vw;
+  left: 0vw;
   cursor: url(../img/arrow/cursor-pointer.png), s-resize;
   border-radius: 50%;
+}
+
+#ez-home {
+  position: fixed;
+  top: 0px;
+  width: 100vw;
+  height: 10vh;
 }
 
 .bubble {
@@ -317,11 +325,9 @@ nav ul li {
 /* Hamburger Menu */
 .McButton {
   z-index: 800;
-  position: fixed;
-  right: 2.5vw;
-  top: 8vh;
-  margin-left: -22px;
-  margin-top: -22px;
+  position: absolute;
+  right: 14vh;
+  top: 6vh;
   width: 44px;
   height: 33px;
   cursor: url(../img/arrow/cursor-pointer.png), s-resize;
@@ -423,7 +429,7 @@ nav ul li {
 /*test class*/
 .ez-start {
   position: relative;
-  height: calc(100vh - 4em);
+  height: 100vh;
   width: 100%;
   text-align: center;
   overflow: hidden;
