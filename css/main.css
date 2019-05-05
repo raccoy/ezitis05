@@ -21,7 +21,6 @@ body {
   margin: 0;
   width: 100%;
   overflow-x: hidden;
-  overflow-y: scroll;
   cursor: url(../img/arrow/cursor-default.png), default;
 }
 
@@ -436,14 +435,6 @@ nav ul li {
   overflow: hidden;
 }
 
-#sakums {
-  scroll-snap-align: end;
-}
-
-#ez-visi {
-  scroll-snap-align: start;
-}
-
 .ez-next {
   position: relative;
   height: 100vh;
@@ -658,7 +649,6 @@ nav ul li {
   text-align: center;
   background-color: #2c2c2c;
   overflow: hidden;
-  scroll-snap-align: start;
 }
 
 .bg-about {
@@ -1280,7 +1270,6 @@ nav ul li {
   height: 100vh;
   overflow: hidden;
   background-color: #2c2c2c;
-  scroll-snap-align: start;
 }
 
 .grid-edieni {
@@ -1429,7 +1418,6 @@ nav ul li {
   height: 100vh;
   overflow: hidden;
   background-color: #a7a7a7;
-  scroll-snap-align: start;
 }
 
 .grid-izbrauk {
@@ -1588,7 +1576,6 @@ nav ul li {
   height: 100vh;
   overflow: hidden;
   background-color: #2c2c2c;
-  scroll-snap-align: start;
 }
 
 .grid-kontakt {
