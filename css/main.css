@@ -1039,7 +1039,7 @@ nav ul li {
 }
 
 .ab-text-draugs-1-im-slide {
-  z-index: 9;
+  z-index: 10;
   -ms-grid-column: 1;
   -ms-grid-column-span: 8;
   grid-column: 1/9;
