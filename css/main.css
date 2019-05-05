@@ -77,13 +77,13 @@ header .logo {
 /*logo*/
 .holder {
   position: fixed;
-  overflow: hidden;
   width: 15vh;
   height: 15vh;
   top: 0vw;
   left: 0vw;
   cursor: url(../img/arrow/cursor-pointer.png), s-resize;
   border-radius: 50%;
+  z-index: 999;
 }
 
 #ez-home {
