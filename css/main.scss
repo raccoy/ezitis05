@@ -89,7 +89,7 @@ header {
 /*logo*/
 
 .holder {
-    position: absolute;
+    position: fixed;
     overflow: hidden;
     width: 15vh;
     height: 15vh;
@@ -103,6 +103,7 @@ header {
    top: 0px;
    width: 100vw;
    height: 10vh;
+   display: contents;
  }
 
  .bubble {
@@ -277,8 +278,8 @@ nav {
 /* Hamburger Menu */
 .McButton {
     z-index: 800;
-    position: absolute;
-    right: 14vh;
+    position: fixed;
+    right: 6vh;
     top: 6vh;
    // margin-left: -22px;
     //margin-top: -22px;
