@@ -14,10 +14,23 @@
   src: url(./font/Inconsolata-Bold.ttf);
 }
 
+:root {
+  --light-bg: #d1cdc7;
+  --text-whit: white;
+  --text-black: black;
+  --darck-bg: #1f1f1f;
+  --d-ligh-bg: #36373b;
+  --cont-darck: #3f3e3c;
+  --bg-color-darck: #1f1f1f;
+  --bg-color-light: #d1cdc7;
+  --content-color-light: white;
+  --content-color-darck: black;
+}
+
 body {
   font-family: 'big-b-t';
   font-size: 20px;
-  background-color: #2c2c2c;
+  background-color: var(--bg-color-darck);
   margin: 0;
   width: 100%;
   overflow-x: hidden;
@@ -41,11 +54,11 @@ body a {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #2c2c2c;
+  background-color: var(--bg-color-darck);
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #a7a7a7;
+  background-color: var(--bg-color-light);
 }
 
 header {
@@ -132,8 +145,7 @@ header .logo {
 /*logo*/
 nav {
   position: absolute;
-  color: #e1e1e1;
-  background-color: #e1e1e1;
+  background-color: var(--bg-color-darck);
   right: 0%;
   padding: 2em;
   width: calc(100% - 4em);
@@ -156,7 +168,7 @@ nav ul {
 }
 
 nav ul a {
-  color: #2c2c2c;
+  color: var(--content-color-light);
   font-weight: bold;
   font-size: 5em;
   cursor: url(../img/arrow/cursor-pointer.png), s-resize;
@@ -440,7 +452,7 @@ nav ul li {
   height: 100vh;
   width: 100%;
   text-align: center;
-  background-color: #a7a7a7;
+  background-color: var(--bg-color-light);
   overflow: hidden;
 }
 
@@ -639,7 +651,8 @@ nav ul li {
   z-index: 0;
   background-size: cover;
   background-position: center;
-  color: #2c2c2c;
+  color: var(--content-color-darck);
+  opacity: .3 !important;
   /*transition: transform 0.2s linear 0s;
     will-change: transform;
     opacity: 1 !important;
@@ -654,7 +667,7 @@ nav ul li {
   height: 200vh;
   width: 100%;
   text-align: center;
-  background-color: #2c2c2c;
+  background-color: var(--bg-color-darck);
   overflow: hidden;
 }
 
@@ -662,7 +675,7 @@ nav ul li {
   font-family: "big-b-t";
   position: absolute;
   font-size: 50vh;
-  color: #a7a7a7;
+  color: var(--bg-color-light);
   left: 0;
   top: 10vh;
   line-height: 45vh;
@@ -671,11 +684,12 @@ nav ul li {
   transition: transform 0.2s linear 0s;
   transition: transform 0.2s linear 0s, -webkit-transform 0.2s linear 0s;
   will-change: transform;
-  color: #a7a7a7;
-  -webkit-text-fill-color: #2c2c2c;
+  color: var(--bg-color-light);
+  -webkit-text-fill-color: var(--bg-color-darck);
   /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #7e7e7e;
+  -webkit-text-stroke-color: var(--bg-color-light);
+  opacity: .3;
 }
 
 .grid-about {
@@ -699,7 +713,7 @@ nav ul li {
   -ms-grid-row: 2;
   grid-row: 2;
   z-index: 5;
-  color: #e1e1e1;
+  color: var(--content-color-light);
   text-align: left;
 }
 
@@ -714,7 +728,7 @@ nav ul li {
   -ms-grid-row: 3;
   grid-row: 3;
   z-index: 5;
-  color: #e1e1e1;
+  color: var(--content-color-light);
   text-align: left;
 }
 
@@ -727,7 +741,7 @@ nav ul li {
   -ms-grid-row: 4;
   grid-row: 4;
   z-index: 5;
-  color: #e1e1e1;
+  color: var(--content-color-light);
   text-align: right;
 }
 
@@ -740,21 +754,21 @@ nav ul li {
   -ms-grid-row: 5;
   grid-row: 5;
   z-index: 5;
-  color: #e1e1e1;
+  color: var(--content-color-light);
   text-align: left;
 }
 
 .link {
   font-family: "reg-text-b";
   cursor: url(../img/arrow/cursor-pointer.png), s-resize;
-  color: #ffffff;
+  color: var(--content-color-light);
   text-decoration: underline;
 }
 
 .link-darck {
   font-family: "reg-text-b";
   cursor: url(../img/arrow/cursor-pointer.png), s-resize;
-  color: #2c2c2c;
+  color: var(--content-color-darck);
   text-decoration: underline;
 }
 
@@ -767,7 +781,7 @@ nav ul li {
   -ms-grid-row: 6;
   grid-row: 6;
   z-index: 5;
-  color: #e1e1e1;
+  color: var(--content-color-light);
   text-align: left;
 }
 
@@ -779,7 +793,7 @@ nav ul li {
   grid-column: 9/var(--mediaEnd, 15);
   -ms-grid-row: 1;
   grid-row: 1;
-  color: #e1e1e1;
+  color: var(--content-color-light);
   text-align: left;
   z-index: 1;
 }
@@ -808,7 +822,7 @@ nav ul li {
   padding: 0;
   width: 100%;
   height: 100%;
-  background: #a7a7a7;
+  background-color: var(--bg-color-light);
   overflow: hidden;
   text-align: center;
 }
@@ -868,19 +882,19 @@ nav ul li {
 }
 
 .container .page#page1 {
-  background-color: #2c2c2c;
+  background-color: var(--bg-color-darck);
 }
 
 .container .page#page2 {
-  background-color: #a7a7a7;
+  background-color: var(--bg-color-light);
 }
 
 .container .page#page3 {
-  background-color: #2c2c2c;
+  background-color: var(--bg-color-darck);
 }
 
 .container .page#page4 {
-  background-color: #a7a7a7;
+  background-color: var(--bg-color-light);
 }
 
 .change-page {
@@ -909,7 +923,7 @@ nav ul li {
   font-family: 'big-b-t';
   font-size: 1.5em;
   line-height: 1em;
-  color: #e1e1e1;
+  color: var(--content-color-light);
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -938,7 +952,7 @@ nav ul li {
   font-family: 'reg-text-b';
   font-size: 1.5em;
   line-height: 1em;
-  color: #2c2c2c;
+  color: var(--content-color-darck);
   text-decoration: none;
   text-align: left;
 }
@@ -954,7 +968,7 @@ nav ul li {
   font-family: 'reg-text';
   font-size: 1.5em;
   line-height: 1em;
-  color: #2c2c2c;
+  color: var(--content-color-darck);
   text-decoration: none;
   text-align: left;
 }
@@ -970,7 +984,7 @@ nav ul li {
   font-family: 'reg-text';
   font-size: 1em;
   line-height: 1em;
-  color: #2c2c2c;
+  color: var(--content-color-darck);
   text-decoration: none;
   text-align: left;
 }
@@ -982,25 +996,26 @@ nav ul li {
   top: 20vh;
   font-family: "big-b-t";
   font-size: 15vw;
-  color: #a7a7a7;
+  color: var(--bg-color-light);
   -webkit-transition: -webkit-transform 0.2s linear 0s;
   transition: -webkit-transform 0.2s linear 0s;
   transition: transform 0.2s linear 0s;
   transition: transform 0.2s linear 0s, -webkit-transform 0.2s linear 0s;
   will-change: transform;
   opacity: 0.2;
-  color: #a7a7a7;
-  -webkit-text-fill-color: #a7a7a7;
+  color: var(--bg-color-light);
+  -webkit-text-fill-color: var(--bg-color-light);
   /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #2c2c2c;
+  -webkit-text-stroke-color: var(--bg-color-darck);
+  opacity: .3;
 }
 
 .ab-img-block {
   position: absolute;
   font-family: "reg-text";
   font-size: 1em;
-  color: #e1e1e1;
+  color: var(--bg-color-light);
   text-align: left;
   z-index: 1;
   right: 15vw;
@@ -1024,7 +1039,7 @@ nav ul li {
   font-family: 'reg-text';
   font-size: 1.4em;
   line-height: 1em;
-  color: #e1e1e1;
+  color: var(--content-color-light);
   text-decoration: none;
   text-align: right;
 }
@@ -1040,7 +1055,7 @@ nav ul li {
   font-family: 'reg-text';
   font-size: 1.4em;
   line-height: 1em;
-  color: #e1e1e1;
+  color: var(--content-color-light);
   text-decoration: none;
   text-align: right;
 }
@@ -1058,7 +1073,7 @@ nav ul li {
   padding-left: 4vw;
   font-size: 1.5em;
   line-height: 1em;
-  color: #e1e1e1;
+  color: var(--content-color-light);
   text-decoration: none;
   text-align: right;
   cursor: url(../img/arrow/cursor-pointer.png), s-resize;
@@ -1072,18 +1087,18 @@ nav ul li {
   top: 20vh;
   font-family: "big-b-t";
   font-size: 15vw;
-  color: #2c2c2c;
+  color: var(--bg-color-darck);
   -webkit-transition: -webkit-transform 0.2s linear 0s;
   transition: -webkit-transform 0.2s linear 0s;
   transition: transform 0.2s linear 0s;
   transition: transform 0.2s linear 0s, -webkit-transform 0.2s linear 0s;
   will-change: transform;
-  opacity: 0.2;
-  color: #2c2c2c;
-  -webkit-text-fill-color: #2c2c2c;
+  opacity: 0.3;
+  color: var(--bg-color-darck);
+  -webkit-text-fill-color: var(--bg-color-darck);
   /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #a7a7a7;
+  -webkit-text-stroke-color: var(var(--bg-color-light));
 }
 
 .ab-text-dkarte-1 {
@@ -1097,7 +1112,7 @@ nav ul li {
   font-family: 'reg-text';
   font-size: 1.5em;
   line-height: 1em;
-  color: #2c2c2c;
+  color: var(--content-color-darck);
   text-decoration: none;
   text-align: left;
 }
@@ -1112,7 +1127,7 @@ nav ul li {
   font-family: 'reg-text';
   font-size: 1.5em;
   line-height: 1em;
-  color: #2c2c2c;
+  color: var(--content-color-darck);
   text-decoration: none;
   text-align: left;
 }
@@ -1127,7 +1142,7 @@ nav ul li {
   font-family: 'reg-text';
   font-size: 1em;
   line-height: 1em;
-  color: #2c2c2c;
+  color: var(--content-color-darck);
   text-decoration: none;
   text-align: left;
 }
@@ -1140,18 +1155,18 @@ nav ul li {
   top: 20vh;
   font-family: "big-b-t";
   font-size: 15vw;
-  color: #a7a7a7;
+  color: var(--bg-color-light);
   -webkit-transition: -webkit-transform 0.2s linear 0s;
   transition: -webkit-transform 0.2s linear 0s;
   transition: transform 0.2s linear 0s;
   transition: transform 0.2s linear 0s, -webkit-transform 0.2s linear 0s;
   will-change: transform;
-  opacity: 0.2;
-  color: #a7a7a7;
-  -webkit-text-fill-color: #a7a7a7;
+  opacity: 0.3;
+  color: var(--bg-color-light);
+  -webkit-text-fill-color: var(--bg-color-light);
   /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #2c2c2c;
+  -webkit-text-stroke-color: var(--bg-color-darck);
 }
 
 .ab-img-block2 {
@@ -1159,7 +1174,7 @@ nav ul li {
   margin: 0px;
   font-family: "reg-text";
   font-size: 1em;
-  color: #e1e1e1;
+  color: var(--content-color-light);
   text-align: left;
   z-index: 6;
   right: 15vw;
@@ -1183,7 +1198,7 @@ nav ul li {
   font-family: 'reg-text';
   font-size: 1em;
   line-height: 1em;
-  color: #e1e1e1;
+  color: var(--content-color-light);
   text-decoration: none;
   text-align: left;
 }
@@ -1198,7 +1213,7 @@ nav ul li {
   font-family: 'reg-text';
   font-size: 1em;
   line-height: 1em;
-  color: #e1e1e1;
+  color: var(--content-color-light);
   text-decoration: none;
   text-align: left;
 }
@@ -1213,7 +1228,7 @@ nav ul li {
   font-family: 'reg-text';
   font-size: 1em;
   line-height: 1em;
-  color: #e1e1e1;
+  color: var(--content-color-light);
   text-decoration: none;
   text-align: left;
 }
@@ -1228,7 +1243,7 @@ nav ul li {
   font-family: 'reg-text';
   font-size: 1em;
   line-height: 1em;
-  color: #e1e1e1;
+  color: var(--content-color-light);
   text-decoration: none;
   text-align: left;
 }
@@ -1241,18 +1256,18 @@ nav ul li {
   top: 20vh;
   font-family: "big-b-t";
   font-size: 15vw;
-  color: #2c2c2c;
+  color: var(--bg-color-darck);
   -webkit-transition: -webkit-transform 0.2s linear 0s;
   transition: -webkit-transform 0.2s linear 0s;
   transition: transform 0.2s linear 0s;
   transition: transform 0.2s linear 0s, -webkit-transform 0.2s linear 0s;
   will-change: transform;
-  opacity: 0.2;
-  color: #2c2c2c;
-  -webkit-text-fill-color: #2c2c2c;
+  opacity: 0.3;
+  color: var(--bg-color-darck);
+  -webkit-text-fill-color: var(--bg-color-darck);
   /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #a7a7a7;
+  -webkit-text-stroke-color: var(--bg-color-light);
 }
 
 .ab-img-block3 {
@@ -1260,7 +1275,7 @@ nav ul li {
   margin: 0px;
   font-family: "reg-text";
   font-size: 1em;
-  color: #e1e1e1;
+  color: var(--content-color-light);
   text-align: left;
   z-index: 6;
   top: 15vh;
@@ -1279,7 +1294,7 @@ nav ul li {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background-color: #2c2c2c;
+  background-color: var(--bg-color-darck);
 }
 
 .grid-edieni {
@@ -1303,18 +1318,18 @@ nav ul li {
   top: 20vh;
   font-family: "big-b-t";
   font-size: 15vw;
-  color: #2c2c2c;
+  color: var(--bg-color-darck);
   -webkit-transition: -webkit-transform 0.2s linear 0s;
   transition: -webkit-transform 0.2s linear 0s;
   transition: transform 0.2s linear 0s;
   transition: transform 0.2s linear 0s, -webkit-transform 0.2s linear 0s;
   will-change: transform;
-  opacity: 0.2;
-  color: #2c2c2c;
-  -webkit-text-fill-color: #2c2c2c;
+  opacity: 0.3;
+  color: var(--bg-color-darck);
+  -webkit-text-fill-color: var(--bg-color-darck);
   /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #a7a7a7;
+  -webkit-text-stroke-color: var(--bg-color-light);
 }
 
 .edienu-text-1 {
@@ -1328,7 +1343,7 @@ nav ul li {
   font-family: 'reg-text-b';
   font-size: 1.5em;
   line-height: 1em;
-  color: #e1e1e1;
+  color: var(--content-color-light);
   text-decoration: none;
   text-align: left;
 }
@@ -1344,7 +1359,7 @@ nav ul li {
   font-family: 'reg-text';
   font-size: 1em;
   line-height: 1em;
-  color: #e1e1e1;
+  color: var(--content-color-light);
   text-decoration: none;
   text-align: left;
 }
@@ -1359,7 +1374,7 @@ nav ul li {
   font-family: 'reg-text';
   font-size: 1em;
   line-height: 1em;
-  color: #e1e1e1;
+  color: var(--content-color-light);
   text-decoration: none;
   text-align: left;
 }
@@ -1374,7 +1389,7 @@ nav ul li {
   font-family: 'reg-text';
   font-size: 1em;
   line-height: 1.2em;
-  color: #e1e1e1;
+  color: var(--content-color-light);
   text-decoration: none;
   text-align: left;
 }
@@ -1394,7 +1409,7 @@ nav ul li {
   font-family: 'reg-text';
   font-size: 1em;
   line-height: 1.2em;
-  color: #e1e1e1;
+  color: var(--content-color-light);
   text-decoration: none;
   text-align: left;
 }
@@ -1409,7 +1424,7 @@ nav ul li {
   margin: 0px;
   font-family: "reg-text";
   font-size: 1em;
-  color: #e1e1e1;
+  color: var(--content-color-light);
   text-align: left;
   z-index: 4;
   bottom: 9vh;
@@ -1427,7 +1442,7 @@ nav ul li {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background-color: #a7a7a7;
+  background-color: var(--bg-color-light);
 }
 
 .grid-izbrauk {
@@ -1451,18 +1466,18 @@ nav ul li {
   top: 20vh;
   font-family: "big-b-t";
   font-size: 15vw;
-  color: #a7a7a7;
+  color: var(--bg-color-light);
   -webkit-transition: -webkit-transform 0.2s linear 0s;
   transition: -webkit-transform 0.2s linear 0s;
   transition: transform 0.2s linear 0s;
   transition: transform 0.2s linear 0s, -webkit-transform 0.2s linear 0s;
   will-change: transform;
-  opacity: 0.2;
-  color: #a7a7a7;
-  -webkit-text-fill-color: #a7a7a7;
+  opacity: 0.3;
+  color: var(--bg-color-light);
+  -webkit-text-fill-color: var(--bg-color-light);
   /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #2c2c2c;
+  -webkit-text-stroke-color: var(--bg-color-darck);
 }
 
 .izbrauk-text-1 {
@@ -1476,7 +1491,7 @@ nav ul li {
   font-family: 'reg-text';
   font-size: 1em;
   line-height: 1em;
-  color: #2c2c2c;
+  color: var(--content-color-darck);
   text-decoration: none;
   text-align: left;
 }
@@ -1491,14 +1506,14 @@ nav ul li {
   font-family: 'reg-text-b';
   font-size: 1em;
   line-height: 1em;
-  color: #2c2c2c;
+  color: var(--content-color-darck);
   text-decoration: none;
   text-align: right;
 }
 
 .izbrauk-text-2 a {
   font-family: "reg-text-b";
-  color: #2c2c2c;
+  color: var(--content-color-darck);
   text-decoration: underline;
 }
 
@@ -1512,7 +1527,7 @@ nav ul li {
   font-family: 'reg-text';
   font-size: 1em;
   line-height: 1.2em;
-  color: #2c2c2c;
+  color: var(--content-color-darck);
   text-decoration: none;
   text-align: left;
 }
@@ -1532,7 +1547,7 @@ nav ul li {
   font-family: 'reg-text';
   font-size: 1em;
   line-height: 1.2em;
-  color: #2c2c2c;
+  color: var(--content-color-darck);
   text-decoration: none;
   text-align: left;
 }
@@ -1552,7 +1567,7 @@ nav ul li {
   font-family: 'reg-text';
   font-size: 1em;
   line-height: 1.2em;
-  color: #2c2c2c;
+  color: var(--content-color-darck);
   text-decoration: none;
   text-align: right;
 }
@@ -1567,7 +1582,7 @@ nav ul li {
   margin: 0px;
   font-family: "reg-text";
   font-size: 1em;
-  color: #e1e1e1;
+  color: var(--content-color-light);
   text-align: left;
   z-index: 4;
   top: 5vh;
@@ -1585,7 +1600,7 @@ nav ul li {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background-color: #2c2c2c;
+  background-color: var(--bg-color-darck);
 }
 
 .grid-kontakt {
@@ -1610,18 +1625,18 @@ nav ul li {
   top: 20vh;
   font-family: "big-b-t";
   font-size: 20vw;
-  color: #a7a7a7;
+  color: var(--bg-color-light);
   -webkit-transition: -webkit-transform 0.2s linear 0s;
   transition: -webkit-transform 0.2s linear 0s;
   transition: transform 0.2s linear 0s;
   transition: transform 0.2s linear 0s, -webkit-transform 0.2s linear 0s;
   will-change: transform;
-  opacity: 0.2;
-  color: #a7a7a7;
-  -webkit-text-fill-color: #a7a7a7;
+  opacity: 0.3;
+  color: var(--bg-color-light);
+  -webkit-text-fill-color: var(--bg-color-light);
   /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #2c2c2c;
+  -webkit-text-stroke-color: var(--bg-color-darck);
 }
 
 .kontakt-text-bg-r {
@@ -1632,18 +1647,18 @@ nav ul li {
   top: 20vh;
   font-family: "big-b-t";
   font-size: 20vw;
-  color: #2c2c2c;
+  color: var(--bg-color-darck);
   -webkit-transition: -webkit-transform 0.2s linear 0s;
   transition: -webkit-transform 0.2s linear 0s;
   transition: transform 0.2s linear 0s;
   transition: transform 0.2s linear 0s, -webkit-transform 0.2s linear 0s;
   will-change: transform;
-  opacity: 0.2;
-  color: #2c2c2c;
-  -webkit-text-fill-color: #2c2c2c;
+  opacity: 0.3;
+  color: var(--bg-color-darck);
+  -webkit-text-fill-color: var(--bg-color-darck);
   /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #7e7e7e;
+  -webkit-text-stroke-color: var(--bg-color-light);
 }
 
 .kontakt-left-b {
@@ -1651,7 +1666,7 @@ nav ul li {
   width: 50vw;
   height: 100vh;
   display: block;
-  background-color: #a7a7a7;
+  background-color: var(--bg-color-light);
   overflow: hidden;
 }
 
@@ -1661,7 +1676,7 @@ nav ul li {
   width: 50vw;
   height: 100vh;
   display: block;
-  background-color: #2c2c2c;
+  background-color: var(--bg-color-darck);
   overflow: hidden;
 }
 
@@ -1676,7 +1691,7 @@ nav ul li {
   font-family: 'reg-text';
   font-size: 1em;
   line-height: 1em;
-  color: #2c2c2c;
+  color: var(--content-color-darck);
   text-decoration: none;
   text-align: left;
 }
@@ -1696,7 +1711,7 @@ nav ul li {
   font-family: 'reg-text';
   font-size: 1em;
   line-height: 1em;
-  color: #2c2c2c;
+  color: var(--content-color-darck);
   text-decoration: none;
   text-align: left;
 }
@@ -1710,7 +1725,7 @@ nav ul li {
   font-family: 'reg-text';
   font-size: 1em;
   line-height: 1em;
-  color: #e1e1e1;
+  color: var(--content-color-light);
   text-decoration: none;
   text-align: left;
 }
@@ -1730,7 +1745,7 @@ nav ul li {
   font-family: 'reg-text';
   font-size: 1em;
   line-height: 1.2em;
-  color: #e1e1e1;
+  color: var(--content-color-light);
   text-decoration: none;
   text-align: left;
 }
