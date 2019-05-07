@@ -6,12 +6,12 @@
 
 @font-face {
   font-family: reg-text;
-  src: url(./font/Inconsolata-Regular.ttf);
+  src: url(./font/Roboto-Regular.ttf);
 }
 
 @font-face {
   font-family: reg-text-b;
-  src: url(./font/Inconsolata-Bold.ttf);
+  src: url(./font/Roboto-Bold.ttf);
 }
 
 :root {
@@ -75,6 +75,14 @@ header .logo {
   position: fixed;
 }
 
+.color-darck {
+  color: var(--bg-color-darck);
+}
+
+.color-light {
+  color: var(--bg-color-light);
+}
+
 .z-1000 {
   z-index: 1000;
 }
@@ -134,12 +142,13 @@ header .logo {
 .circle {
   pointer-events: none;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -6em 0 0 -6em;
-  width: 4em;
-  height: 4em;
+  z-index: -1;
+  right: 25%;
+  top: 25%;
+  width: 50%;
+  height: 50%;
   border-radius: 50%;
+  background-color: var(--bg-color-darck);
 }
 
 /*logo*/
@@ -357,7 +366,7 @@ nav ul li {
 .McButtonc b {
   position: absolute;
   z-index: 800;
-  background-color: #e1e1e1;
+  background-color: var(--content-color-light);
 }
 
 .McButton b:nth-child(1) {
@@ -435,7 +444,7 @@ nav ul li {
 
 /*Start content*/
 .about {
-  background-color: #e1e1e1;
+  background-color: var(--bg-color-light);
 }
 
 /*test class*/
@@ -459,7 +468,7 @@ nav ul li {
 .d-block {
   display: block;
   position: relative;
-  color: #e1e1e1;
+  color: var(--content-color-light);
   font-size: 40px;
 }
 
@@ -653,6 +662,8 @@ nav ul li {
   background-position: center;
   color: var(--content-color-darck);
   opacity: .3 !important;
+  text-shadow: 0 0 5px var(--content-color-darck);
+  color: transparent;
   /*transition: transform 0.2s linear 0s;
     will-change: transform;
     opacity: 1 !important;
@@ -685,11 +696,12 @@ nav ul li {
   transition: transform 0.2s linear 0s, -webkit-transform 0.2s linear 0s;
   will-change: transform;
   color: var(--bg-color-light);
-  -webkit-text-fill-color: var(--bg-color-darck);
-  /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: var(--bg-color-light);
-  opacity: .3;
+  /* -webkit-text-fill-color: var(--bg-color-darck); Will override color (regardless of order)
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--bg-color-light); */
+  opacity: .1;
+  text-shadow: 0 0 10px var(--bg-color-light);
+  color: transparent;
 }
 
 .grid-about {
@@ -1004,11 +1016,12 @@ nav ul li {
   will-change: transform;
   opacity: 0.2;
   color: var(--bg-color-light);
-  -webkit-text-fill-color: var(--bg-color-light);
-  /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: var(--bg-color-darck);
-  opacity: .3;
+  /*-webkit-text-fill-color: var(--bg-color-light); 
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: var(--bg-color-darck);*/
+  opacity: .2;
+  text-shadow: 0 0 10px var(--bg-color-darck);
+  color: transparent;
 }
 
 .ab-img-block {
@@ -1095,10 +1108,12 @@ nav ul li {
   will-change: transform;
   opacity: 0.3;
   color: var(--bg-color-darck);
-  -webkit-text-fill-color: var(--bg-color-darck);
-  /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: var(var(--bg-color-light));
+  /*-webkit-text-fill-color: var(--bg-color-darck); 
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: var(var(--bg-color-light));*/
+  opacity: .1;
+  text-shadow: 0 0 10px var(--bg-color-light);
+  color: transparent;
 }
 
 .ab-text-dkarte-1 {
@@ -1163,10 +1178,12 @@ nav ul li {
   will-change: transform;
   opacity: 0.3;
   color: var(--bg-color-light);
-  -webkit-text-fill-color: var(--bg-color-light);
-  /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: var(--bg-color-darck);
+  /*-webkit-text-fill-color: var(--bg-color-light); 
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: var(--bg-color-darck);*/
+  opacity: .2;
+  text-shadow: 0 0 10px var(--bg-color-darck);
+  color: transparent;
 }
 
 .ab-img-block2 {
@@ -1264,10 +1281,12 @@ nav ul li {
   will-change: transform;
   opacity: 0.3;
   color: var(--bg-color-darck);
-  -webkit-text-fill-color: var(--bg-color-darck);
-  /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: var(--bg-color-light);
+  /*-webkit-text-fill-color: var(--bg-color-darck); 
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: var(--bg-color-light);*/
+  opacity: .1;
+  text-shadow: 0 0 10px var(--bg-color-light);
+  color: transparent;
 }
 
 .ab-img-block3 {
@@ -1326,10 +1345,12 @@ nav ul li {
   will-change: transform;
   opacity: 0.3;
   color: var(--bg-color-darck);
-  -webkit-text-fill-color: var(--bg-color-darck);
-  /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: var(--bg-color-light);
+  /*-webkit-text-fill-color: var(--bg-color-darck); 
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: var(--bg-color-light);*/
+  opacity: .1;
+  text-shadow: 0 0 10px var(--bg-color-light);
+  color: transparent;
 }
 
 .edienu-text-1 {
@@ -1474,10 +1495,12 @@ nav ul li {
   will-change: transform;
   opacity: 0.3;
   color: var(--bg-color-light);
-  -webkit-text-fill-color: var(--bg-color-light);
-  /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: var(--bg-color-darck);
+  /*-webkit-text-fill-color: var(--bg-color-light);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: var(--bg-color-darck);*/
+  opacity: .2;
+  text-shadow: 0 0 10px var(--bg-color-darck);
+  color: transparent;
 }
 
 .izbrauk-text-1 {
@@ -1633,10 +1656,12 @@ nav ul li {
   will-change: transform;
   opacity: 0.3;
   color: var(--bg-color-light);
-  -webkit-text-fill-color: var(--bg-color-light);
-  /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: var(--bg-color-darck);
+  /*-webkit-text-fill-color: var(--bg-color-light); 
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: var(--bg-color-darck);*/
+  opacity: .2;
+  text-shadow: 0 0 10px var(--bg-color-darck);
+  color: transparent;
 }
 
 .kontakt-text-bg-r {
@@ -1655,10 +1680,12 @@ nav ul li {
   will-change: transform;
   opacity: 0.3;
   color: var(--bg-color-darck);
-  -webkit-text-fill-color: var(--bg-color-darck);
-  /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: var(--bg-color-light);
+  /* -webkit-text-fill-color: var(--bg-color-darck); 
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: var(--bg-color-light);*/
+  opacity: .1;
+  text-shadow: 0 0 10px var(--bg-color-light);
+  color: transparent;
 }
 
 .kontakt-left-b {
