@@ -13,12 +13,24 @@
     src: url(./font/Inconsolata-Bold.ttf);
 }
 
+:root {
+  --light-bg: #d1cdc7;
+  --text-whit: white;
+  --text-black: black;
+  --darck-bg: #1f1f1f;
+  --d-ligh-bg: #36373b;
+  --cont-darck: #3f3e3c;
 
+  --bg-color-darck: #1f1f1f;
+  --bg-color-light: #d1cdc7;
+  --content-color-light: white;
+  --content-color-darck: black;
+}
 
 body{
     font-family: 'big-b-t';
     font-size: 20px;
-    background-color: #2c2c2c;
+    background-color: var(--bg-color-darck);
     //background-color: rgb(196, 196, 196);
     margin: 0;
     width: 100%;
@@ -27,7 +39,7 @@ body{
     //scroll-behavior: smooth;
     
     //scroll-snap-type: y mandatory;
-
+    //color: var(--content-color-darck);
     //overflow-y: scroll;
     a {
         text-decoration: none;
@@ -51,11 +63,11 @@ body{
   
 ::-webkit-scrollbar-thumb {
 	
-	background-color: #2c2c2c;
+	background-color: var(--bg-color-darck);
 }
 ::-webkit-scrollbar-track {
 	
-	background-color: #a7a7a7;
+  background-color: var(--bg-color-light);
 }
 
 header {
@@ -142,8 +154,8 @@ header {
 
 nav {
     position:absolute;
-    color: #e1e1e1;
-    background-color: #e1e1e1;
+    //color: #e1e1e1;
+    background-color: var(--bg-color-darck);
     right: 0%;
     padding: 2em;
     width: calc(100% - 4em);
@@ -163,7 +175,7 @@ nav {
         text-align: center;
 
         a {
-            color: #2c2c2c;
+            color: var(--content-color-light);
             font-weight: bold;
             font-size: 5em;
             cursor: url(../img/arrow/cursor-pointer.png), s-resize;
@@ -398,7 +410,7 @@ nav {
     height: 100vh; 
     width: 100%;
     text-align: center;
-    background-color: #a7a7a7;
+    background-color: var(--bg-color-light);
     overflow: hidden;
 
     
@@ -479,7 +491,9 @@ nav {
     z-index: 0;
     background-size:cover;
     background-position: center;
-    color: #2c2c2c;
+    color: var(--content-color-darck);
+    opacity: .3 !important;
+    
     //line-height: 45vh;
     /*transition: transform 0.2s linear 0s;
     will-change: transform;
@@ -497,7 +511,7 @@ nav {
   height: 200vh; 
   width: 100%;
   text-align: center;
-  background-color: #2c2c2c;
+  background-color: var(--bg-color-darck);
   overflow: hidden;
   
   
@@ -507,16 +521,17 @@ nav {
     font-family: "big-b-t";
     position: absolute;
     font-size: 50vh;
-    color: #a7a7a7;
+    color: var(--bg-color-light);
     left: 0;
     top: 10vh;
     line-height: 45vh;
     transition: transform 0.2s linear 0s;
     will-change: transform;
-    color: #a7a7a7;
-    -webkit-text-fill-color: #2c2c2c; /* Will override color (regardless of order) */
+    color: var(--bg-color-light);
+    -webkit-text-fill-color: var(--bg-color-darck); /* Will override color (regardless of order) */
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #7e7e7e;
+    -webkit-text-stroke-color: var(--bg-color-light);
+    opacity: .3;
 }
 
 .grid-about {
@@ -535,7 +550,7 @@ nav {
      grid-column: 2/9;
      grid-row: 2;
      z-index: 5;
-     color: #e1e1e1;
+     color: var(--content-color-light);
      text-align: left;
 
  } 
@@ -547,7 +562,7 @@ nav {
     grid-column: 2/13;
     grid-row: 3;
     z-index: 5;
-    color: #e1e1e1;
+    color: var(--content-color-light);
     text-align: left;
 
 } 
@@ -557,7 +572,7 @@ nav {
     grid-column: 4/14;
     grid-row: 4;
     z-index: 5;
-    color: #e1e1e1;
+    color: var(--content-color-light);
     text-align: right;
 
 } 
@@ -567,20 +582,20 @@ nav {
     grid-column: 2/11;
     grid-row: 5;
     z-index: 5;
-    color: #e1e1e1;
+    color: var(--content-color-light);
     text-align: left;
 } 
 .link {
     font-family: "reg-text-b";
     cursor: url(../img/arrow/cursor-pointer.png), s-resize;
 
-    color: #ffffff;
+    color: var(--content-color-light);
     text-decoration: underline;
 }
 .link-darck {
     font-family: "reg-text-b";
     cursor: url(../img/arrow/cursor-pointer.png), s-resize;
-    color: #2c2c2c;
+    color: var(--content-color-darck);
     text-decoration: underline;
 }
 .about-t-5 {
@@ -589,7 +604,7 @@ nav {
     grid-column: 2/8;
     grid-row: 6;
     z-index: 5;
-    color: #e1e1e1;
+    color: var(--content-color-light);
     text-align: left;
 } 
 .about-t-1-i {
@@ -599,7 +614,7 @@ nav {
     font-size: 1em;
     grid-column: 9/ var(--mediaEnd, 15);
     grid-row: 1;
-    color: #e1e1e1;
+    color: var(--content-color-light);
     text-align: left;
     z-index: 1;
     
@@ -632,7 +647,7 @@ nav {
     padding: 0;
     width: 100%;
     height: 100%;
-    background: #a7a7a7;
+    background-color:var(--bg-color-light);
     overflow: hidden;
     text-align: center;
   }
@@ -693,16 +708,16 @@ nav {
     visibility: hidden;
   }
    .container .page#page1 {
-    background-color: #2c2c2c;
+    background-color: var(--bg-color-darck);
   }
    .container .page#page2 {
-    background-color: #a7a7a7;
+    background-color: var(--bg-color-light);
   }
    .container .page#page3 {
-    background-color: #2c2c2c;
+    background-color: var(--bg-color-darck);
   }
    .container .page#page4 {
-    background-color: #a7a7a7;
+    background-color: var(--bg-color-light);
   }
    .change-page {
     position: absolute;
@@ -732,7 +747,7 @@ nav {
     font-family: 'big-b-t';
     font-size: 1.5em;
     line-height: 1em;
-    color: #e1e1e1;
+    color: var(--content-color-light);
     text-decoration: none;
     text-transform: uppercase;
   }
@@ -752,7 +767,7 @@ nav {
       font-family: 'reg-text-b';
     font-size: 1.5em;
     line-height: 1em;
-    color: #2c2c2c;
+    color: var(--content-color-darck);
     text-decoration: none;
     text-align: left;
   }
@@ -763,7 +778,7 @@ nav {
     font-family: 'reg-text';
   font-size: 1.5em;
   line-height: 1em;
-  color: #2c2c2c;
+  color: var(--content-color-darck);
   text-decoration: none;
   text-align: left;
 }
@@ -774,7 +789,7 @@ nav {
   font-family: 'reg-text';
 font-size: 1em;
 line-height: 1em;
-color: #2c2c2c;
+color: var(--content-color-darck);
 text-decoration: none;
 text-align: left;
 }
@@ -785,23 +800,23 @@ text-align: left;
     top: 20vh;
     font-family: "big-b-t";
     font-size: 15vw;
-    color: #a7a7a7;
+    color: var(--bg-color-light);
     //line-height: 45vh;
     transition: transform 0.2s linear 0s;
     will-change: transform;
     opacity: 0.2;
-    color: #a7a7a7;
-    -webkit-text-fill-color: #a7a7a7; /* Will override color (regardless of order) */
+    color: var(--bg-color-light);
+    -webkit-text-fill-color: var(--bg-color-light); /* Will override color (regardless of order) */
     -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #2c2c2c;
-    
+    -webkit-text-stroke-color: var(--bg-color-darck);
+    opacity: .3;
 }
 .ab-img-block {
     position: absolute;
     //top: 5vh;
     font-family: "reg-text";
     font-size: 1em;
-    color: #e1e1e1;
+    color: var(--bg-color-light);
     text-align: left;
     z-index: 1;
     right: 15vw;
@@ -824,7 +839,7 @@ text-align: left;
     font-family: 'reg-text';
   font-size: 1.4em;
   line-height: 1em;
-  color: #e1e1e1;
+  color:  var(--content-color-light);
   text-decoration: none;
   text-align: right;
 }
@@ -835,7 +850,7 @@ text-align: left;
     font-family: 'reg-text';
   font-size: 1.4em;
   line-height: 1em;
-  color: #e1e1e1;
+  color:  var(--content-color-light);
   text-decoration: none;
   text-align: right;
 }
@@ -848,7 +863,7 @@ text-align: left;
     padding-left: 4vw;
   font-size: 1.5em;
   line-height: 1em;
-  color: #e1e1e1;
+  color:  var(--content-color-light);
   text-decoration: none;
   text-align: right;
   cursor: url(../img/arrow/cursor-pointer.png), s-resize;
@@ -862,15 +877,15 @@ text-align: left;
     top: 20vh;
     font-family: "big-b-t";
     font-size: 15vw;
-    color: #2c2c2c;
+    color: var(--bg-color-darck);
     //line-height: 45vh;
     transition: transform 0.2s linear 0s;
     will-change: transform;
-    opacity: 0.2;
-    color: #2c2c2c;
-    -webkit-text-fill-color: #2c2c2c; /* Will override color (regardless of order) */
+    opacity: 0.3;
+    color: var(--bg-color-darck);
+    -webkit-text-fill-color: var(--bg-color-darck); /* Will override color (regardless of order) */
     -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #a7a7a7;
+    -webkit-text-stroke-color: var(var(--bg-color-light));
     
 }
 .ab-text-dkarte-1 {
@@ -880,7 +895,7 @@ text-align: left;
     font-family: 'reg-text';
   font-size: 1.5em;
   line-height: 1em;
-  color: #2c2c2c;
+  color: var(--content-color-darck);
   text-decoration: none;
   text-align: left;
 }
@@ -891,7 +906,7 @@ text-align: left;
     font-family: 'reg-text';
   font-size: 1.5em;
   line-height: 1em;
-  color: #2c2c2c;
+  color:  var(--content-color-darck);
   text-decoration: none;
   text-align: left;
 }
@@ -902,7 +917,7 @@ text-align: left;
     font-family: 'reg-text';
   font-size: 1em;
   line-height: 1em;
-  color: #2c2c2c;
+  color:  var(--content-color-darck);
   text-decoration: none;
   text-align: left;
 }
@@ -914,15 +929,15 @@ text-align: left;
     top: 20vh;
     font-family: "big-b-t";
     font-size: 15vw;
-    color: #a7a7a7;
+    color: var(--bg-color-light);
     //line-height: 45vh;
     transition: transform 0.2s linear 0s;
     will-change: transform;
-    opacity: 0.2;
-    color: #a7a7a7;
-    -webkit-text-fill-color: #a7a7a7; /* Will override color (regardless of order) */
+    opacity: 0.3;
+    color: var(--bg-color-light);
+    -webkit-text-fill-color: var(--bg-color-light); /* Will override color (regardless of order) */
     -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #2c2c2c;
+    -webkit-text-stroke-color: var(--bg-color-darck);
     
 }
 .ab-img-block2 {
@@ -931,7 +946,7 @@ text-align: left;
     //top: 5vh;
     font-family: "reg-text";
     font-size: 1em;
-    color: #e1e1e1;
+    color:  var(--content-color-light);
     text-align: left;
     z-index: 6;
     right: 15vw;
@@ -954,7 +969,7 @@ text-align: left;
      font-family: 'reg-text';
    font-size: 1em;
    line-height: 1em;
-   color: #e1e1e1;
+   color:  var(--content-color-light);
    text-decoration: none;
    text-align: left;
  }
@@ -965,7 +980,7 @@ text-align: left;
      font-family: 'reg-text';
    font-size: 1em;
    line-height: 1em;
-   color: #e1e1e1;
+   color:  var(--content-color-light);
    text-decoration: none;
    text-align: left;
  }
@@ -976,7 +991,7 @@ text-align: left;
      font-family: 'reg-text';
    font-size: 1em;
    line-height: 1em;
-   color: #e1e1e1;
+   color:  var(--content-color-light);
    text-decoration: none;
    text-align: left;
  }
@@ -987,7 +1002,7 @@ text-align: left;
      font-family: 'reg-text';
    font-size: 1em;
    line-height: 1em;
-   color: #e1e1e1;
+   color:  var(--content-color-light);
    text-decoration: none;
    text-align: left;
  }
@@ -999,15 +1014,15 @@ text-align: left;
     top: 20vh;
     font-family: "big-b-t";
     font-size: 15vw;
-    color: #2c2c2c;
+    color: var(--bg-color-darck);
     //line-height: 45vh;
     transition: transform 0.2s linear 0s;
     will-change: transform;
-    opacity: 0.2;
-    color: #2c2c2c;
-    -webkit-text-fill-color: #2c2c2c; /* Will override color (regardless of order) */
+    opacity: 0.3;
+    color: var(--bg-color-darck);
+    -webkit-text-fill-color: var(--bg-color-darck); /* Will override color (regardless of order) */
     -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #a7a7a7;
+    -webkit-text-stroke-color: var(--bg-color-light);
     
 }
 .ab-img-block3 {
@@ -1016,7 +1031,7 @@ text-align: left;
     //top: 5vh;
     font-family: "reg-text";
     font-size: 1em;
-    color: #e1e1e1;
+    color:  var(--content-color-light);
     text-align: left;
     z-index: 6;
     top: 15vh;
@@ -1040,7 +1055,7 @@ text-align: left;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    background-color: #2c2c2c;
+    background-color: var(--bg-color-darck);
     
 }
 .grid-edieni{
@@ -1060,15 +1075,15 @@ text-align: left;
     top: 20vh;
     font-family: "big-b-t";
     font-size: 15vw;
-    color: #2c2c2c;
+    color: var(--bg-color-darck);
     //line-height: 45vh;
     transition: transform 0.2s linear 0s;
     will-change: transform;
-    opacity: 0.2;
-    color: #2c2c2c;
-    -webkit-text-fill-color: #2c2c2c; /* Will override color (regardless of order) */
+    opacity: 0.3;
+    color: var(--bg-color-darck);
+    -webkit-text-fill-color: var(--bg-color-darck); /* Will override color (regardless of order) */
     -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #a7a7a7;
+    -webkit-text-stroke-color: var(--bg-color-light);
     
 }
 .edienu-text-1 {
@@ -1078,7 +1093,7 @@ text-align: left;
      font-family: 'reg-text-b';
    font-size: 1.5em;
    line-height: 1em;
-   color: #e1e1e1;
+   color:  var(--content-color-light);
    text-decoration: none;
    text-align: left;
  }
@@ -1089,7 +1104,7 @@ text-align: left;
      font-family: 'reg-text';
    font-size: 1em;
    line-height: 1em;
-   color: #e1e1e1;
+   color:  var(--content-color-light);
    text-decoration: none;
    text-align: left;
  }
@@ -1100,7 +1115,7 @@ text-align: left;
      font-family: 'reg-text';
    font-size: 1em;
    line-height: 1em;
-   color: #e1e1e1;
+   color:  var(--content-color-light);
    text-decoration: none;
    text-align: left;
  }
@@ -1111,7 +1126,7 @@ text-align: left;
      font-family: 'reg-text';
    font-size: 1em;
    line-height: 1.2em;
-   color: #e1e1e1;
+   color:  var(--content-color-light);
    text-decoration: none;
    text-align: left;
    p {
@@ -1126,7 +1141,7 @@ text-align: left;
      font-family: 'reg-text';
    font-size: 1em;
    line-height: 1.2em;
-   color: #e1e1e1;
+   color:  var(--content-color-light);
    text-decoration: none;
    text-align: left;
    p {
@@ -1140,7 +1155,7 @@ text-align: left;
     //top: 5vh;
     font-family: "reg-text";
     font-size: 1em;
-    color: #e1e1e1;
+    color:  var(--content-color-light);
     text-align: left;
     z-index: 4;
     bottom: 9vh;
@@ -1162,7 +1177,7 @@ text-align: left;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    background-color: #a7a7a7;
+    background-color: var(--bg-color-light);
     
 }
 .grid-izbrauk{
@@ -1182,15 +1197,15 @@ text-align: left;
     top: 20vh;
     font-family: "big-b-t";
     font-size: 15vw;
-    color: #a7a7a7;
+    color: var(--bg-color-light);
     //line-height: 45vh;
     transition: transform 0.2s linear 0s;
     will-change: transform;
-    opacity: 0.2;
-    color: #a7a7a7;
-    -webkit-text-fill-color: #a7a7a7; /* Will override color (regardless of order) */
+    opacity: 0.3;
+    color: var(--bg-color-light);
+    -webkit-text-fill-color: var(--bg-color-light); /* Will override color (regardless of order) */
     -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #2c2c2c;
+    -webkit-text-stroke-color: var(--bg-color-darck);
     
 }
 .izbrauk-text-1 {
@@ -1200,7 +1215,7 @@ text-align: left;
      font-family: 'reg-text';
    font-size: 1em;
    line-height: 1em;
-   color: #2c2c2c;
+   color:  var(--content-color-darck);
    //color: #e1e1e1;
    text-decoration: none;
    text-align: left;
@@ -1212,13 +1227,13 @@ text-align: left;
      font-family: 'reg-text-b';
    font-size: 1em;
    line-height: 1em;
-   color: #2c2c2c;
+   color:  var(--content-color-darck);
    text-decoration: none;
    text-align: right;
 
    a {
     font-family: "reg-text-b";
-    color: #2c2c2c;
+    color:  var(--content-color-darck);
     text-decoration: underline;
 }
  }
@@ -1229,7 +1244,7 @@ text-align: left;
      font-family: 'reg-text';
    font-size: 1em;
    line-height: 1.2em;
-   color: #2c2c2c;
+   color:  var(--content-color-darck);
    text-decoration: none;
    text-align: left;
    p {
@@ -1244,7 +1259,7 @@ text-align: left;
      font-family: 'reg-text';
    font-size: 1em;
    line-height: 1.2em;
-   color: #2c2c2c;
+   color:  var(--content-color-darck);
    text-decoration: none;
    text-align: left;
    p {
@@ -1259,7 +1274,7 @@ text-align: left;
      font-family: 'reg-text';
    font-size: 1em;
    line-height: 1.2em;
-   color: #2c2c2c;
+   color:  var(--content-color-darck);
    text-decoration: none;
    text-align: right;
    p {
@@ -1274,7 +1289,7 @@ text-align: left;
     //top: 5vh;
     font-family: "reg-text";
     font-size: 1em;
-    color: #e1e1e1;
+    color:  var(--content-color-light);
     text-align: left;
     z-index: 4;
     top: 5vh;
@@ -1299,7 +1314,7 @@ text-align: left;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    background-color: #2c2c2c;
+    background-color: var(--bg-color-darck);
     
 }
 .grid-kontakt{
@@ -1320,15 +1335,15 @@ text-align: left;
     top: 20vh;
     font-family: "big-b-t";
     font-size: 20vw;
-    color: #a7a7a7;
+    color: var(--bg-color-light);
     //line-height: 45vh;
     transition: transform 0.2s linear 0s;
     will-change: transform;
-    opacity: 0.2;
-    color: #a7a7a7;
-    -webkit-text-fill-color: #a7a7a7; /* Will override color (regardless of order) */
+    opacity: 0.3;
+    color: var(--bg-color-light);
+    -webkit-text-fill-color: var(--bg-color-light); /* Will override color (regardless of order) */
     -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #2c2c2c;
+    -webkit-text-stroke-color: var(--bg-color-darck);
     
 }
 .kontakt-text-bg-r{
@@ -1339,15 +1354,15 @@ text-align: left;
     top: 20vh;
     font-family: "big-b-t";
     font-size: 20vw;
-    color: #2c2c2c;
+    color: var(--bg-color-darck);
     //line-height: 45vh;
     transition: transform 0.2s linear 0s;
     will-change: transform;
-    opacity: 0.2;
-    color: #2c2c2c;
-    -webkit-text-fill-color: #2c2c2c; /* Will override color (regardless of order) */
+    opacity: 0.3;
+    color: var(--bg-color-darck);
+    -webkit-text-fill-color: var(--bg-color-darck); /* Will override color (regardless of order) */
     -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #7e7e7e;
+    -webkit-text-stroke-color: var(--bg-color-light);
     
 }
 
@@ -1356,7 +1371,7 @@ text-align: left;
      width: 50vw;
      height: 100vh;
      display: block;
-     background-color: #a7a7a7;
+     background-color: var(--bg-color-light);
      //grid-column: 1;
      overflow: hidden;
 
@@ -1367,7 +1382,7 @@ text-align: left;
     width: 50vw;
     height: 100vh;
     display: block;
-    background-color: #2c2c2c;
+    background-color: var(--bg-color-darck);
     //grid-column: 2;
     overflow: hidden;
 
@@ -1380,7 +1395,7 @@ text-align: left;
    font-size: 1em;
    line-height: 1em;
    //color: #e1e1e1;
-   color: #2c2c2c;
+   color:  var(--content-color-darck);
    text-decoration: none;
    text-align: left;
    strong{
@@ -1396,7 +1411,7 @@ text-align: left;
    font-size: 1em;
    line-height: 1em;
    //color: #e1e1e1;
-   color: #2c2c2c;
+   color:  var(--content-color-darck);
    text-decoration: none;
    text-align: left;
  }
@@ -1408,7 +1423,7 @@ text-align: left;
      font-family: 'reg-text';
    font-size: 1em;
    line-height: 1em;
-   color: #e1e1e1;
+   color:  var(--content-color-light);
    //color: #2c2c2c;
    text-decoration: none;
    text-align: left;
@@ -1424,7 +1439,7 @@ text-align: left;
      font-family: 'reg-text';
    font-size: 1em;
    line-height: 1.2em;
-   color: #e1e1e1;
+   color:  var(--content-color-light);
    //color: #2c2c2c;
    text-decoration: none;
    text-align: left;
