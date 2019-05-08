@@ -25,7 +25,9 @@
   --bg-color-light: #d1cdc7;
   --content-color-light: white;
   --content-color-darck: black;
+  --content-color-ac: #ff5c22;
 }
+
 
 body{
     font-family: 'big-b-t';
@@ -48,7 +50,21 @@ body{
 
 }
 
+.main-font-text{
+  font-family: 'reg-text';
+  font-size: 1em;
+  line-height: 1.2em;
+}
+.main-font-text-b{
+  font-family: 'reg-text-b';
+  font-size: 1em;
+  line-height: 1.2em;
+}
 
+.big-bg {
+  font-family: 'big-b-t';
+  font-size: 15vw;
+}
 
 .cursor-def{
     cursor: url(../img/arrow/cursor-default.png), default;
@@ -63,11 +79,18 @@ body{
   
 ::-webkit-scrollbar-thumb {
 	
-	background-color: var(--bg-color-darck);
+	background-color: var(--content-color-ac);
 }
 ::-webkit-scrollbar-track {
 	
   background-color: var(--bg-color-light);
+}
+
+.menu-h {
+  transition: color 1s ease;
+  &:hover{
+    color: #ff5c22;
+  }
 }
 
 header {
@@ -427,6 +450,10 @@ nav {
       position: relative;
       color: var(--content-color-light);
       font-size: 40px;
+      transition: color .2s ease;
+      &:hover{
+        color: #ff5c22;
+      }
   }
   /*test class*/
 
@@ -494,7 +521,7 @@ nav {
     position: absolute;
     font-size: 30vw;
     top: 15vh;
-    left: 0;
+    left: 10vw;
     z-index: 0;
     background-size:cover;
     background-position: center;
@@ -527,11 +554,9 @@ nav {
 }
 
 .bg-about {
-    font-family: "big-b-t";
     position: absolute;
-    font-size: 50vh;
     color: var(--bg-color-light);
-    left: 0;
+    left: 20vw;;
     top: 10vh;
     line-height: 45vh;
     transition: transform 0.2s linear 0s;
@@ -543,6 +568,7 @@ nav {
     opacity: .1;
     text-shadow: 0 0 10px var(--bg-color-light);
     color: transparent;
+    text-align: left;
 }
 
 .grid-about {
@@ -556,8 +582,6 @@ nav {
   }
 
  .about-t-1 {
-     font-family: "reg-text";
-     font-size: 1em;
      grid-column: 2/9;
      grid-row: 2;
      z-index: 5;
@@ -568,8 +592,6 @@ nav {
  .about-t-2 {
   margin-top: -5vh;
   margin-left: -5vw;
-    font-family: "reg-text";
-    font-size: 1em;
     grid-column: 2/13;
     grid-row: 3;
     z-index: 5;
@@ -578,8 +600,6 @@ nav {
 
 } 
 .about-t-3 {
-    font-family: "reg-text";
-    font-size: 1em;
     grid-column: 4/14;
     grid-row: 4;
     z-index: 5;
@@ -588,9 +608,7 @@ nav {
 
 } 
 .about-t-4 {
-    font-family: "reg-text";
-    font-size: 1em;
-    grid-column: 2/11;
+    grid-column: 5/14;
     grid-row: 5;
     z-index: 5;
     color: var(--content-color-light);
@@ -610,9 +628,7 @@ nav {
     text-decoration: underline;
 }
 .about-t-5 {
-    font-family: "reg-text-b";
-    font-size: 1em;
-    grid-column: 2/8;
+    grid-column: 4/8;
     grid-row: 6;
     z-index: 5;
     color: var(--content-color-light);
@@ -775,9 +791,6 @@ nav {
       z-index: 2;
       grid-column: 3/14;
       grid-row: 4/5;
-      font-family: 'reg-text-b';
-    font-size: 1.5em;
-    line-height: 1em;
     color: var(--content-color-darck);
     text-decoration: none;
     text-align: left;
@@ -786,9 +799,6 @@ nav {
       z-index: 2;
     grid-column: 4/14;
     grid-row: 5/8;
-    font-family: 'reg-text';
-  font-size: 1.5em;
-  line-height: 1em;
   color: var(--content-color-darck);
   text-decoration: none;
   text-align: left;
@@ -796,10 +806,8 @@ nav {
 .ab-text-draugs-3 {
     z-index: 2;
   grid-column: 3/13;
-  grid-row: 8/9;
-  font-family: 'reg-text';
-font-size: 1em;
-line-height: 1em;
+  margin-top: -3vh;
+  grid-row: 7;
 color: var(--content-color-darck);
 text-decoration: none;
 text-align: left;
@@ -809,8 +817,6 @@ text-align: left;
     z-index: 0;
     left: 20vw;
     top: 20vh;
-    font-family: "big-b-t";
-    font-size: 15vw;
     color: var(--bg-color-light);
     //line-height: 45vh;
     transition: transform 0.2s linear 0s;
@@ -847,31 +853,26 @@ text-align: left;
 } 
 .ab-text-draugs-1-right {
    z-index: 8;
-    grid-column: 8/15;
+    grid-column: 10/15;
     grid-row: 4/5;
-    font-family: 'reg-text';
-  font-size: 1.4em;
-  line-height: 1em;
   color:  var(--content-color-light);
   text-decoration: none;
-  text-align: right;
+  text-align: left;
 }
 .ab-text-draugs-2-right {
     z-index: 8;
-    grid-column: 9/15;
+    grid-column: 11/15;
     grid-row: 5/8;
-    font-family: 'reg-text';
-  font-size: 1.4em;
-  line-height: 1em;
   color:  var(--content-color-light);
   text-decoration: none;
-  text-align: right;
+  text-align: left;
 }
 .ab-text-draugs-1-im-slide {
     z-index: 10;
     grid-column: 1/9;
-    grid-row: 2/8;
+    grid-row: 1/8;
     font-family: 'reg-text';
+    margin-top: 5vh;
     padding-top: 4vh;
     padding-left: 4vw;
   font-size: 1.5em;
@@ -888,8 +889,6 @@ text-align: left;
     text-align: right;
     right: -8vw;
     top: 20vh;
-    font-family: "big-b-t";
-    font-size: 15vw;
     color: var(--bg-color-darck);
     //line-height: 45vh;
     transition: transform 0.2s linear 0s;
@@ -906,22 +905,16 @@ text-align: left;
 }
 .ab-text-dkarte-1 {
     z-index: 8;
-    grid-column: 3/12;
-    grid-row: 4/5;
-    font-family: 'reg-text';
-  font-size: 1.5em;
-  line-height: 1em;
+    grid-column: 5/14;
+    grid-row: 4;
   color: var(--content-color-darck);
   text-decoration: none;
   text-align: left;
 }
 .ab-text-dkarte-2 {
     z-index: 8;
-    grid-column: 4/13;
-    grid-row: 6/6;
-    font-family: 'reg-text';
-  font-size: 1.5em;
-  line-height: 1em;
+    grid-column: 6/15;
+    grid-row: 5;
   color:  var(--content-color-darck);
   text-decoration: none;
   text-align: left;
@@ -929,10 +922,7 @@ text-align: left;
 .ab-text-dkarte-3 {
     z-index: 8;
     grid-column: 3/13;
-    grid-row: 8/8;
-    font-family: 'reg-text';
-  font-size: 1em;
-  line-height: 1em;
+    grid-row: 6;
   color:  var(--content-color-darck);
   text-decoration: none;
   text-align: left;
@@ -943,8 +933,6 @@ text-align: left;
     z-index: 6;
     left: 20vw;
     top: 20vh;
-    font-family: "big-b-t";
-    font-size: 15vw;
     color: var(--bg-color-light);
     //line-height: 45vh;
     transition: transform 0.2s linear 0s;
@@ -985,9 +973,6 @@ text-align: left;
     z-index: 8;
      grid-column: 3/10;
      grid-row: 4/5;
-     font-family: 'reg-text';
-   font-size: 1em;
-   line-height: 1em;
    color:  var(--content-color-light);
    text-decoration: none;
    text-align: left;
@@ -996,9 +981,6 @@ text-align: left;
     z-index: 8;
      grid-column: 4/11;
      grid-row: 5/5;
-     font-family: 'reg-text';
-   font-size: 1em;
-   line-height: 1em;
    color:  var(--content-color-light);
    text-decoration: none;
    text-align: left;
@@ -1007,9 +989,6 @@ text-align: left;
     z-index: 8;
      grid-column: 5/12;
      grid-row: 6/6;
-     font-family: 'reg-text';
-   font-size: 1em;
-   line-height: 1em;
    color:  var(--content-color-light);
    text-decoration: none;
    text-align: left;
@@ -1018,9 +997,6 @@ text-align: left;
     z-index: 8;
      grid-column: 6/12;
      grid-row: 7/7;
-     font-family: 'reg-text';
-   font-size: 1em;
-   line-height: 1em;
    color:  var(--content-color-light);
    text-decoration: none;
    text-align: left;
@@ -1031,8 +1007,6 @@ text-align: left;
     text-align: left;
     left: 14vw;
     top: 20vh;
-    font-family: "big-b-t";
-    font-size: 15vw;
     color: var(--bg-color-darck);
     //line-height: 45vh;
     transition: transform 0.2s linear 0s;
@@ -1095,8 +1069,6 @@ text-align: left;
     text-align: left;
     left: 14vw;
     top: 20vh;
-    font-family: "big-b-t";
-    font-size: 15vw;
     color: var(--bg-color-darck);
     //line-height: 45vh;
     transition: transform 0.2s linear 0s;
@@ -1113,44 +1085,35 @@ text-align: left;
 }
 .edienu-text-1 {
     z-index: 8;
-     grid-column: 7/14;
+     grid-column: 5/14;
      grid-row: 3/4;
-     font-family: 'reg-text-b';
-   font-size: 1.5em;
-   line-height: 1em;
    color:  var(--content-color-light);
    text-decoration: none;
    text-align: left;
  }
  .edienu-text-2 {
     z-index: 8;
-     grid-column: 3/8;
+     grid-column: 4/10;
      grid-row: 4/6;
-     font-family: 'reg-text';
-   font-size: 1em;
-   line-height: 1em;
+    margin-top: -5vh;
    color:  var(--content-color-light);
    text-decoration: none;
    text-align: left;
  }
  .edienu-text-3 {
     z-index: 8;
-     grid-column: 10/16;
+     grid-column: 11/17;
      grid-row: 4/4;
-     font-family: 'reg-text';
-   font-size: 1em;
-   line-height: 1em;
+
    color:  var(--content-color-light);
    text-decoration: none;
    text-align: left;
  }
  .edienu-text-4 {
     z-index: 8;
-     grid-column: 10/16;
+     grid-column: 12/17;
      grid-row: 5/5;
-     font-family: 'reg-text';
-   font-size: 1em;
-   line-height: 1.2em;
+    margin-top: -4vh;
    color:  var(--content-color-light);
    text-decoration: none;
    text-align: left;
@@ -1161,11 +1124,9 @@ text-align: left;
  }
  .edienu-text-5 {
     z-index: 8;
-     grid-column: 10/15;
-     grid-row: 8;
-     font-family: 'reg-text';
-   font-size: 1em;
-   line-height: 1.2em;
+     grid-column: 11/16;
+     grid-row: 7;
+
    color:  var(--content-color-light);
    text-decoration: none;
    text-align: left;
@@ -1192,7 +1153,7 @@ text-align: left;
         width: 35vw;
         height: auto;
         //display: block;
-        opacity: 0.6;
+        opacity: 0.3;
         
     }
 } 
@@ -1220,8 +1181,7 @@ text-align: left;
     text-align: left;
     left: 14vw;
     top: 20vh;
-    font-family: "big-b-t";
-    font-size: 15vw;
+
     color: var(--bg-color-light);
     //line-height: 45vh;
     transition: transform 0.2s linear 0s;
@@ -1240,9 +1200,6 @@ text-align: left;
     z-index: 8;
      grid-column: 3/14;
      grid-row: 3/4;
-     font-family: 'reg-text';
-   font-size: 1em;
-   line-height: 1em;
    color:  var(--content-color-darck);
    //color: #e1e1e1;
    text-decoration: none;
@@ -1252,9 +1209,6 @@ text-align: left;
     z-index: 8;
      grid-column: 3/14;
      grid-row: 4/4;
-     font-family: 'reg-text-b';
-   font-size: 1em;
-   line-height: 1em;
    color:  var(--content-color-darck);
    text-decoration: none;
    text-align: right;
@@ -1269,9 +1223,6 @@ text-align: left;
     z-index: 8;
      grid-column: 4/15;
      grid-row: 5;
-     font-family: 'reg-text';
-   font-size: 1em;
-   line-height: 1.2em;
    color:  var(--content-color-darck);
    text-decoration: none;
    text-align: left;
@@ -1284,9 +1235,6 @@ text-align: left;
     z-index: 8;
      grid-column: 3/14;
      grid-row: 6;
-     font-family: 'reg-text';
-   font-size: 1em;
-   line-height: 1.2em;
    color:  var(--content-color-darck);
    text-decoration: none;
    text-align: left;
@@ -1299,9 +1247,7 @@ text-align: left;
     z-index: 8;
      grid-column: 4/15;
      grid-row: 8;
-     font-family: 'reg-text';
-   font-size: 1em;
-   line-height: 1.2em;
+    margin-top: -8vh;
    color:  var(--content-color-darck);
    text-decoration: none;
    text-align: right;
@@ -1361,8 +1307,6 @@ text-align: left;
     text-align: left;
     left: 10vw;
     top: 20vh;
-    font-family: "big-b-t";
-    font-size: 20vw;
     color: var(--bg-color-light);
     //line-height: 45vh;
     transition: transform 0.2s linear 0s;
@@ -1383,8 +1327,6 @@ text-align: left;
     text-align: left;
     left: -40vw;
     top: 20vh;
-    font-family: "big-b-t";
-    font-size: 20vw;
     color: var(--bg-color-darck);
     //line-height: 45vh;
     transition: transform 0.2s linear 0s;
@@ -1425,9 +1367,6 @@ text-align: left;
     z-index: 8;
      grid-column: 2/6;
      grid-row: 3/4;
-     font-family: 'reg-text';
-   font-size: 1em;
-   line-height: 1em;
    //color: #e1e1e1;
    color:  var(--content-color-darck);
    text-decoration: none;
@@ -1441,9 +1380,6 @@ text-align: left;
     z-index: 8;
      grid-column: 2/7;
      grid-row: 9;
-     font-family: 'reg-text';
-   font-size: 1em;
-   line-height: 1em;
    //color: #e1e1e1;
    color:  var(--content-color-darck);
    text-decoration: none;
@@ -1454,9 +1390,6 @@ text-align: left;
     z-index: 8;
      grid-column: 7;
      grid-row: 3;
-     font-family: 'reg-text';
-   font-size: 1em;
-   line-height: 1em;
    color:  var(--content-color-light);
    //color: #2c2c2c;
    text-decoration: none;
@@ -1470,9 +1403,6 @@ text-align: left;
     z-index: 8;
      grid-column: 8/12;
      grid-row: 3;
-     font-family: 'reg-text';
-   font-size: 1em;
-   line-height: 1.2em;
    color:  var(--content-color-light);
    //color: #2c2c2c;
    text-decoration: none;
