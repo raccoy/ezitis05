@@ -689,9 +689,8 @@ nav ul li {
   position: absolute;
   font-size: 30vw;
   top: 15vh;
-  left: 10vw;
+  left: 15vw;
   z-index: 0;
-  background-size: cover;
   background-position: center;
   color: var(--content-color-darck);
   opacity: .3 !important;
