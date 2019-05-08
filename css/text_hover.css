@@ -43,13 +43,13 @@
     .text-hover:hover, .text-hover:focus {
       outline: 0;
           cursor: url(../img/arrow/cursor-pointer.png), s-resize;
-      color: #ffffff;
+      color: #ff5c22;
       -webkit-transition: color 0.7s ease-in-out;
       transition: color 0.7s ease-in-out; }
     .text-hover:hover:after, .text-hover:focus:after {
-      background-color: #ffffff; }
+      background-color: #ff5c22; }
     .text-hover:hover:before, .text-hover:focus:before {
-      background-color: #ffffff; }
+      background-color: #ff5c22; }
     .text-hover:hover:after, .text-hover:focus:after, .text-hover:hover:before, .text-hover:focus:before {
       -webkit-transition-duration: 0.7s;
       transition-duration: 0.7s;
