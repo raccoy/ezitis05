@@ -2213,4 +2213,15 @@ svg {
     font-size: 3.5em;
   }
 }
+
+@media only screen and (max-width: 380px) {
+  .main-font-text {
+    font-size: .5em;
+    line-height: 1em;
+  }
+  .main-font-text-b {
+    font-size: .5em;
+    line-height: 1em;
+  }
+}
 /*# sourceMappingURL=main.css.map */
