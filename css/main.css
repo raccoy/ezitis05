@@ -2412,7 +2412,7 @@ svg {
     grid-column: 2/14;
     -ms-grid-row: 4;
     grid-row: 4;
-    margin-top: 2vh;
+    margin-top: 5vh;
     z-index: 5;
   }
   .about-t-5 {
@@ -2612,6 +2612,7 @@ svg {
     grid-column: 5/17;
     -ms-grid-row: 5;
     grid-row: 5;
+    margin-top: 2vh;
   }
   .edienu-text-4 {
     -ms-grid-column: 3;
@@ -2630,7 +2631,7 @@ svg {
     grid-column: 4/14;
     -ms-grid-row: 8;
     grid-row: 8;
-    margin-top: -2vh;
+    margin-top: 2vh;
   }
   .edienu-text-5 p {
     margin: 5px;
@@ -2663,7 +2664,7 @@ svg {
     grid-column: 3/14;
     -ms-grid-row: 4;
     grid-row: 4/4;
-    margin-top: 5vh;
+    margin-top: 6vh;
   }
   .izbrauk-text-3 {
     -ms-grid-column: 2;
