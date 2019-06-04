@@ -416,6 +416,14 @@ nav ul li {
 
 /* McButton */
 /* logo */
+.mobi-v {
+  display: block;
+}
+
+.mobi-vv {
+  display: none;
+}
+
 /*Start content*/
 .ezitis {
   position: absolute;
@@ -835,6 +843,13 @@ nav ul li {
   text-decoration: underline;
 }
 
+.link-darck-c {
+  font-family: "reg-text-b";
+  cursor: url(../img/arrow/cursor-pointer.png), s-resize;
+  color: var(--content-color-darck);
+  text-decoration: underline;
+}
+
 .about-t-5 {
   -ms-grid-column: 4;
   -ms-grid-column-span: 4;
@@ -961,7 +976,7 @@ nav ul li {
 .change-page {
   position: absolute;
   display: inline-block;
-  top: 8vh;
+  top: 12vh;
   right: 0;
   left: 0;
   margin: 0 auto;
@@ -2675,6 +2690,65 @@ svg {
   .izbrauk-img-block-1 img {
     width: 60vw;
     opacity: 0.2;
+  }
+  .kontakt-left-b {
+    display: none;
+  }
+  .kontakt-text-bg {
+    display: none;
+  }
+  .kontakt-right-b {
+    position: absolute;
+    right: 0px;
+    width: 100vw;
+    height: 100vh;
+  }
+  .kontakt-text-bg-r {
+    left: 10vw;
+    top: 20vh;
+    text-shadow: 0 0 5px var(--bg-color-light);
+  }
+  .kontakt-text-1 {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 11;
+    grid-column: 2/13;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+    color: var(--content-color-light);
+  }
+  .kontakt-text-2 {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 11;
+    grid-column: 2/13;
+    -ms-grid-row: 9;
+    grid-row: 9;
+    color: var(--content-color-light);
+    margin-top: 9vh;
+  }
+  .link-darck-c {
+    color: var(--content-color-light);
+  }
+  .mobi-v {
+    display: none;
+  }
+  .mobi-vv {
+    display: block;
+  }
+  .kontakt-text-3 {
+    -ms-grid-column: 3;
+    grid-column: 3;
+    -ms-grid-row: 7;
+    grid-row: 7;
+    margin-left: -4vw;
+  }
+  .kontakt-text-4 {
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 10;
+    grid-column: 4/14;
+    -ms-grid-row: 7;
+    grid-row: 7;
+    margin-left: -4vw;
   }
 }
 /*# sourceMappingURL=main.css.map */
